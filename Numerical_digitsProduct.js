@@ -25,7 +25,7 @@ function digitsProduct(product) {
     return listResult.length < 1 ? -1 : Number(listResult.join(''));
 }
 
-console.log(digitsProduct(0));
+console.log(digitsProduct(450));
 
 
 
