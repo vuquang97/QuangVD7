@@ -1,6 +1,11 @@
-function amendTheSentence(s){
-    let regex = /[a-z]+|[A-Z][a-z]+|[A-Z]/g;
-    return s.match(regex).join(' ');
+function checkPalindrome(inputString){
+    for(let i = 0; i < inputString.length; i++) {
+        if(inputString[i] != inputString[inputString.length - i - 1]) {
+            return false;
+        } else if(i >= inputString.length - i - 1) {
+            return true;
+        }
+    }
 }
 
-console.log(amendTheSentence('AvvSKwWDjwIerQKMgVaAniorRJlerbKpDgvyKBLPNwSRWtylqKewNFtERNuUBBHAsGkTSSfdhQHJYvAighAdeG'));
+console.log(checkPalindrome("abba"))
