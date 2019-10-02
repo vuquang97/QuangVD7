@@ -4,11 +4,11 @@ function keyboardRow(words){
 }
 
 function checkWord(word) {
-    let checkRow1 = /[asdfghjklzxcvbnm]/i.test(word);
-    let checkRow2 = /[qwertyuiopzxcvbnm]/i.test(word);
-    let checkRow3 = /[qwertyuiopasdfghjkl]/i.test(word);
+    let checkRow1 = /[asdfghjklzxcvbnm]/i;
+    let checkRow2 = /[qwertyuiopzxcvbnm]/i;
+    let checkRow3 = /[qwertyuiopasdfghjkl]/i;
 
-    return checkRow1 && checkRow2 && checkRow3 ? false : true;
+    return checkRow1.test(word) && checkRow2.test(word) && checkRow3.test(word) ? false : true;
 }
 
 console.log(keyboardRow(["Hello", "Alaska", "Dad", "Peace"]));
